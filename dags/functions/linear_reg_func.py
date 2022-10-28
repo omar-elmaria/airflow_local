@@ -37,7 +37,7 @@ def linear_reg_func(granularity): # "asa" or "vendor"
         destination_tbl = "cvr_per_df_bucket_asa_level_loved_brands_scaled_code"
     elif granularity == "vendor":
         # Download the datasets
-        data_query == """SELECT * FROM `dh-logistics-product-ops.pricing.cvr_per_df_bucket_vendor_level_loved_brands_scaled_code`"""        
+        data_query = """SELECT * FROM `dh-logistics-product-ops.pricing.cvr_per_df_bucket_vendor_level_loved_brands_scaled_code`"""        
         df = client.query(query=data_query).result().to_dataframe(bqstorage_client=bqstorage_client)
         
         # Get the slopes
