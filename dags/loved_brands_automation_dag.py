@@ -1,10 +1,7 @@
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.python import PythonOperator
-from datetime import datetime, timedelta
-from google.cloud import bigquery
 import datetime as dt
-import re
 from groups.group_step_14_loved_brands_automation import step_14_cvr3_per_df_tier_vendor_level
 from groups.group_step_15_loved_brands_automation import step_15_cvr3_per_df_tier_asa_level
 from functions.run_query_func_loved_brands_automation import run_query_func
