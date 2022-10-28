@@ -1,6 +1,6 @@
 FROM apache/airflow:2.3.4
 # These are the new libraries that have to be installed
-RUN pip3 install pandas numpy scipy matplotlib seaborn tqdm db-dtypes ipykernel ipywidgets ipython
+RUN pip3 install pandas numpy scipy matplotlib seaborn tqdm db-dtypes ipykernel ipywidgets ipython scikit-learn
 # Install the libraries required for scraping
 RUN pip3 install scrapy scrapy-playwright pyairtable scrapy-proxy-pool scrapy-user-agents scraperapi-sdk python-dotenv
 # Install the playwright headless browsers
