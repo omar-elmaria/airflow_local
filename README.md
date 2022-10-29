@@ -26,4 +26,4 @@ df = client.query(query=data_query).result().to_dataframe(bqstorage_client=bqsto
 ```
 
 # 3. Questions?
-If you have any questions or wish to build a scraper for a particular use case, feel free to contact me on [LinkedIn](https://www.linkedin.com/in/omar-elmaria/)
+If you have any questions or wish to build data pipelines for a particular use case, feel free to contact me on [LinkedIn](https://www.linkedin.com/in/omar-elmaria/)
