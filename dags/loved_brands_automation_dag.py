@@ -137,22 +137,22 @@ with DAG(
     
     step_15 = step_15_cvr3_per_df_tier_asa_level()
     
-    step_15_4_append_asa_tbl_to_vendor_tbl = PythonOperator(
-        task_id="step_15.4_append_asa_tbl_to_vendor_tbl",
+    step_16_append_asa_tbl_to_vendor_tbl = PythonOperator(
+        task_id="step_16_append_asa_tbl_to_vendor_tbl",
         python_callable=run_query_func,
-        op_kwargs={"file_name": "step_15.4_append_asa_tbl_to_vendor_tbl.sql"},
+        op_kwargs={"file_name": "step_16_append_asa_tbl_to_vendor_tbl.sql"},
     )
     
-    step_16_final_vendor_list_temp = PythonOperator(
-        task_id="step_16_final_vendor_list_temp",
+    step_17_final_vendor_list_temp = PythonOperator(
+        task_id="step_17_final_vendor_list_temp",
         python_callable=run_query_func,
-        op_kwargs={"file_name": "step_16_final_vendor_list_temp.sql"},
+        op_kwargs={"file_name": "step_17_final_vendor_list_temp.sql"},
     )
     
-    step_17_insert_new_records_to_final_tbl = PythonOperator(
-        task_id="step_17_insert_new_records_to_final_tbl",
+    step_18_insert_new_records_to_final_tbl = PythonOperator(
+        task_id="step_18_insert_new_records_to_final_tbl",
         python_callable=run_query_func,
-        op_kwargs={"file_name": "step_17_insert_new_records_to_final_tbl.sql"},
+        op_kwargs={"file_name": "step_18_insert_new_records_to_final_tbl.sql"},
     )
 
     (
@@ -169,7 +169,7 @@ with DAG(
         >> [step_11_filtering_for_vendors_by_pct_ranks, step_12_dps_logs_data]
         >> step_13_join_dps_logs_and_ga_sessions
         >> [step_14, step_15]
-        >> step_15_4_append_asa_tbl_to_vendor_tbl
-        >> step_16_final_vendor_list_temp
-        >> step_17_insert_new_records_to_final_tbl
+        >> step_16_append_asa_tbl_to_vendor_tbl
+        >> step_17_final_vendor_list_temp
+        >> step_18_insert_new_records_to_final_tbl
     )
