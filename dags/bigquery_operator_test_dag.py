@@ -20,7 +20,7 @@ doc_md = """
 """
 
 with DAG(
-    "loved_brands_test_dag",
+    "bigquery_operator_test_dag",
     schedule_interval="0 4 3 * *",  # At 04:00 on day-of-month 3
     default_args=default_args,
     catchup=False,
