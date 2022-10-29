@@ -28,7 +28,7 @@ with DAG(
     default_args=default_args,
     schedule_interval="0 4 3 * *",  # At 04:00 am on day-of-month 3
     catchup=False,
-    tags=["pricing", "loved_brands"],
+    tags=["pricing", "loved_brands"]
 ) as dag:
 
     dag.doc_md = doc_md
