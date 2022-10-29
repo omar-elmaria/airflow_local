@@ -1,9 +1,10 @@
 from airflow.utils.task_group import TaskGroup
 from airflow.operators.python import PythonOperator
-from functions.run_query_func_loved_brands_automation import run_query_func
-from functions.linear_reg_func import linear_reg_func
 
 def step_15_cvr3_per_df_tier_asa_level():
+    from functions.run_query_func_loved_brands_automation import run_query_func
+    from functions.linear_reg_func import linear_reg_func
+    
     with TaskGroup("step_15_cvr3_per_df_tier_asa_level", tooltip="step_15_cvr3_per_df_tier_asa_level") as group:
         step_15_1_cvr3_per_df_tier_per_asa = PythonOperator(
             task_id="step_15.1_cvr3_per_df_tier_per_asa",
