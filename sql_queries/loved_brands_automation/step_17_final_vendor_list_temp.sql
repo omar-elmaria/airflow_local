@@ -1,4 +1,4 @@
--- Step 16: Pull all the data associated with the "Loved Brands" that were obtained in the previous step
+-- Step 17: Pull all the data associated with the "Loved Brands" that were obtained in the previous step
 CREATE OR REPLACE TABLE `dh-logistics-product-ops.pricing.final_vendor_list_all_data_temp_loved_brands_scaled_code` AS
 WITH temp_tbl AS (
     SELECT
